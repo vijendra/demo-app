@@ -33,8 +33,11 @@ group :test do
   gem 'turn', '< 0.8.3', :require => false
 end
 
-
-
+#these are for heroku can be removed latter
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
