@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Thinkspeed
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #wrapper
+      %header.clear
+        / Defining the header section of the page with the appropriate tag
+        %h1.left
+          %img{:height => "60", :src => "http://staging.thinkspeed.com/images/home/thinkspeed-logo.png", :width => "250"}
+        %nav.right
+          / The nav link semantically marks your main site navigation
+          %ul
+            %li= link_to 'Home', '/'
+            = render 'devise/menu/login_items'
+      #content 
+        %p.notice= notice
+        %p.alert= alert
+        = yield
+      %footer  

@@ -1,0 +1,41 @@
+= form_for @employment_detail do |f|
+  -if @employment_detail.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@employment_detail.errors.count, "error")} prohibited this employment_detail from being saved:"
+      %ul
+        - @employment_detail.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title
+  .field
+    = f.label :company
+    %br
+    = f.text_field :company
+  .field
+    = f.label :department
+    %br
+    = f.select :department, ['Accounting & Finance', 'Business Development', 'Information Technology']
+  .field
+    = f.label :job_function
+    %br
+    = f.select :job_function, ['CEO/President', 'Manager', 'Executive - CTO, CIO']
+  .field.left.gap
+    = f.label :from_date
+    %br
+    = f.date_select :from_date, :discard_day => true
+  .field.left
+    = f.label :to_date
+    %br
+    = f.date_select :to_date, :discard_day => true
+  .clear
+    
+  .field
+    = f.label :description
+    %br
+    = f.text_area :description, :class => 'medium'
+  .actions.clear
+    .left.gap= f.submit 'Save'
+    .left= link_to 'Cancel', :back

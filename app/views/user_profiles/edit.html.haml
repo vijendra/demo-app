@@ -1,0 +1,19 @@
+= form_for @profile, :as => :user_profile, :url => update_my_profile_path do |f|
+  %fieldset.registration   
+    .field 
+      = f.label :name
+      %br
+      = f.text_field :name 
+    .field 
+      = f.label :biography
+      %br
+      = f.text_area :biography, :class => :medium
+        
+    .field 
+      = f.label :public_profile_url
+      %br
+      = f.text_field :public_profile_url
+    
+    .actions
+      = f.submit 'Update my profile'
+ 

@@ -1,0 +1,27 @@
+/* The navigation styling: */
+
+nav ul li {
+  display: inline;
+  a {
+    color: #565656;
+    display: block;
+    float: left;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px 2px;
+    padding: 7px 10px 4px;
+    text-shadow: 0 1px 1px white;
+    text-transform: uppercase;
+    &:visited {
+      color: #565656;
+      display: block;
+      float: left;
+      font-size: 1.25em;
+      font-weight: bold;
+      margin: 5px 2px;
+      padding: 7px 10px 4px;
+      text-shadow: 0 1px 1px white;
+      text-transform: uppercase; }
+    &:hover {
+      text-decoration: none;
+      background-color: #f0f0f0; } } }

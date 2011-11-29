@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+ 
+body{font-family: arial; color: #666; background: #eee;}
+#wrapper{width: 980px; margin: 0px auto;}
+#content{background: #fff; padding: 20px; border: 1px solid #ccc;  -moz-border-radius: 8px ; -webkit-border-radius: 8px  ;}
+form fieldset{border: none;}
+
+form input[type='text'], form input[type='password'], form input[type='email'], form textarea {
+  padding: 8px 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  width: 280px;
+  color: #333;
+}
+
+form input[type='submit'], form select{
+  padding: 8px 10px;
+}
+
+form textarea.medium{
+  width: 90%;
+  height: 70px;
+}
+
+form .field{margin-bottom: 15px;}
+form .field label{font-weight: bold; color: #666;}
+
+.left { float:left; }
+
+.right {float:right; }
+.gap{margin-right: 35px;}
+
+/* The clearfix hack to clear the floats: */
+
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+  
+#profile section{margin-bottom: 40px;  }  
+#profile section.top{border-bottom: 1px solid #eee; margin-bottom: 5px;}
+#profile section.top a, .employment a{font-size: 13px; text-decoration: none;}
+#profile section.top h2{margin: 5px 0px;}
+
+#profile section.employment{border-bottom: 1px solid #f1f1f1; padding: 10px;}
+#profile section.employment, #profile .employment section{margin-bottom: 10px;}
+#profile section.employment h4{margin: 5px 0px 10px 0px;}

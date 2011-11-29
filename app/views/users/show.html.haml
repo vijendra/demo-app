@@ -1,0 +1,25 @@
+#profile 
+  %section 
+    %section.top.clear
+      %h2.left= @user.name
+      .right= link_to '[ Edit ]', edit_my_profile_path
+      
+  %section 
+    %section.top.clear
+      %h2.left Biography
+      .right= link_to '[ Edit ]', edit_my_profile_path
+    = @user.biography
+    
+  %section
+    %section.top.clear 
+      %h2.left Employment
+      .right= link_to '[ Add ]', new_employment_detail_path
+    - @employments.each do |employment|
+      %section.employment
+        .clear
+          %h4.left= employment.company
+          .right= link_to '[ Edit ]', edit_employment_detail_path(employment)
+        %p= employment.title
+        %p= "#{employment.from_date.strftime("%B %Y")} - #{employment.to_date.strftime("%B %Y")}"
+%h2 Education
+%h2 Expertise
