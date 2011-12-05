@@ -15,7 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module Thinkspeed
+module DemoApp
   class Application < Rails::Application
     config.autoload_paths += %W(#{Rails.root}/app/presenters)
     # Settings in config/environments/* take precedence over those specified here.

@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Thinkspeed
+    %title DemoApp
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -10,7 +10,7 @@
       %header.clear
         / Defining the header section of the page with the appropriate tag
         %h1.left
-          %img{:height => "60", :src => "http://staging.thinkspeed.com/images/home/thinkspeed-logo.png", :width => "250"}
+          = image_tag "demo_logo.png"
         %nav.right
           / The nav link semantically marks your main site navigation
           %ul

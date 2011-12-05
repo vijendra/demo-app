@@ -1,4 +1,4 @@
-Thinkspeed::Application.routes.draw do
+DemoApp::Application.routes.draw do
   match "my_profile/show" => 'users#show', :as => :show_my_profile
   match "my_profile/edit" => 'user_profiles#edit', :as => :edit_my_profile
   match "my_profile/update" => 'user_profiles#update', :as => :update_my_profile

@@ -1,18 +1,18 @@
-Given /^I am in thinkspeed home page$/ do
+Given /^I am in demo app home page$/ do
   visit '/'
 end
 
-Given /^I am a registered thinkspeed member$/ do
+Given /^I am a registered demo app member$/ do
   @user = Factory(:user)
 end
 
-Given /^I am a registered thinkspeed member with a partially completed profile$/ do
-  step %{I am a registered thinkspeed member}
+Given /^I am a registered demo app member with a partially completed profile$/ do
+  step %{I am a registered demo app member}
   @user.profile = Factory(:profile, :biography => "", :public_profile_url => "")
 end
 
 When /^I sign\-in successfully$/ do
-  step %{I am in thinkspeed home page}
+  step %{I am in demo app home page}
   step %{I click on "Login" link}
   step %{I submit the sign\-in form with valid credentials}
   step %{I should be signed_in successfully}
@@ -26,12 +26,12 @@ When /^I click on "([^"]*)" link$/ do |link|
   click_link link
 end
 
-Given /^I reach thinkspeed sign\-up page$/ do
+Given /^I reach demo app sign\-up page$/ do
   step %{I should be in Sign\-up page}
 end
 
 Then /^I should be in Sign\-up page$/ do
-  page.find('h2').should have_content("Thinkspeed Registration")
+  page.find('h2').should have_content("DemoApp Registration")
 end
 
 Given /^I submit the sign\-up form with valid relevant data$/ do

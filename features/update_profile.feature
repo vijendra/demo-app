@@ -1,10 +1,10 @@
 Feature: Updating profile
   In order to have most complete profile
-  As a registered thinkspeed member
+  As a registered demo app member
   I want to update it
   
   Background:
-    Given I am a registered thinkspeed member with a partially completed profile
+    Given I am a registered demo app member with a partially completed profile
     And I sign-in successfully
     And I am in my profile page
     
