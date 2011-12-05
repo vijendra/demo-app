@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: thinkspeed_development
+  database: demoapp_development
   pool: 5
   username: root
-  password: isiri
+  password:  
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,20 +25,20 @@ test: &test
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: thinkspeed_test
+  database: demoapp_test
   pool: 5
   username: root
-  password: isiri
+  password:  
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: thinkspeed_production
+  database: demoapp_production
   pool: 5
   username: root
-  password: isiri
+  password:  
   socket: /var/run/mysqld/mysqld.sock
 
 cucumber:
